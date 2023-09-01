@@ -9,15 +9,15 @@
 sleep 0.08  # 80ms
 
 # helpful in getting what's going on
-echo "num lock status: `xset q | grep 'Num Lock:' | awk '{print $8}'`" > numlock
+#echo "num lock status: `xset q | grep 'Num Lock:' | awk '{print $8}'`" > numlock
 
 if [ "`xset q | grep 'Num Lock:' | awk '{print $8}'`" = 'on' ]; then
-    echo 'turning OFF mouse keys...' >> numlock
+    #echo 'turning OFF mouse keys...' >> numlock
     xkbset -m # turn off mouse keys
 else
-    echo 'turning ON mouse keys...' >> numlock
+    #echo 'turning ON mouse keys...' >> numlock
     xkbset m # turn on mouse keys
 fi
 
 # checks if mouse keys are "on" or "off"
-echo "mouse keys: `xset q | grep 'Mouse Keys:' | awk '{print $8}'`" >> numlock
+#echo "mouse keys: `xset q | grep 'Mouse Keys:' | awk '{print $8}'`" >> numlock
